@@ -27,7 +27,7 @@ card:
         action: toggle
       type: custom:mushroom-template-card
     - cards:
-      - entity: sensor.pi_hole_domains_blocked
+      - entity: sensor.pi_hole_domanen_gesperrt
         icon: mdi:cancel
         layout: vertical
         multiline_secondary: true
@@ -36,7 +36,7 @@ card:
         tap_action:
           action: more-info
         type: custom:mushroom-template-card
-      - entity: sensor.pi_hole_ads_percentage_blocked_today
+      - entity: sensor.pi_hole_werbungsanteil_heute_blockiert
         icon: mdi:close-octagon-outline
         layout: vertical
         multiline_secondary: true
@@ -45,7 +45,7 @@ card:
         tap_action:
           action: more-info
         type: custom:mushroom-template-card
-      - entity: sensor.pi_hole_dns_unique_clients
+      - entity: sensor.pi_hole_eindeutige_dns_clients
         icon: mdi:devices
         layout: vertical
         multiline_secondary: true
@@ -54,7 +54,7 @@ card:
         tap_action:
           action: more-info
         type: custom:mushroom-template-card
-      - entity: sensor.pi_hole_seen_clients
+      - entity: sensor.pi_hole_gesehene_clients
         icon: mdi:monitor-cellphone-star
         layout: vertical
         multiline_secondary: true
@@ -68,7 +68,7 @@ card:
       - aggregate_func: avg
         entities:
         - color: '#f205b3'
-          entity: sensor.pi_hole_ads_blocked_today
+          entity: sensor.pi_hole_werbung_heute_blockiert
         font_size: 65
         font_size_header: 9
         height: 35
@@ -95,7 +95,7 @@ card:
         - aggregate_func: avg
           entities:
           - color: '#05f248'
-            entity: sensor.pi_hole_dns_queries_cached
+            entity: sensor.pi_hole_dns_abfragen_zwischengespeichert
           font_size: 65
           font_size_header: 9
           height: 40
@@ -120,7 +120,7 @@ card:
         - aggregate_func: avg
           entities:
           - color: '#0293fa'
-            entity: sensor.pi_hole_dns_queries_forwarded
+            entity: sensor.pi_hole_dns_anfragen_weitergeleitet
           font_size: 65
           font_size_header: 9
           height: 40
